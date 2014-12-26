@@ -64,6 +64,9 @@ def test(obj):
     try:
         f=open('log.txt','a')
         f.write(obj)
+        ret['result'] = True
+        ret['comment'] = obj
+        return ret
     except Exception,e:
         ret['result'] = False
         ret['comment'] = e
