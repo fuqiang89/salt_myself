@@ -42,6 +42,6 @@ def installed(name,
             **kwargs):
     ret={}
     try:
-        __salt__['nd_nginx.test'](source)
+        ret=__salt__['nd_nginx.test'](source)
     except Exception,e:
         return _error(ret,e)
