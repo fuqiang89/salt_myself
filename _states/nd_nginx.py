@@ -43,5 +43,6 @@ def installed(name,
     ret={}
     try:
         ret=__salt__['nd_nginx.test'](source)
+        return ret
     except Exception,e:
         return _error(ret,e)
