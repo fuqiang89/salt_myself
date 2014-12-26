@@ -59,11 +59,11 @@ def _error(ret, err_msg):
     ret['comment'] = err_msg
     return ret
 
-def test():
+def test(obj):
     ret ={}
     try:
         f=open('log.txt','a')
-        f.write()
+        f.write(obj)
     except Exception,e:
         ret['result'] = False
         ret['comment'] = e
